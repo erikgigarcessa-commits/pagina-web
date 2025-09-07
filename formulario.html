@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Conecta ECCI – Red de Emprendedores</title>
+  <!-- Enlazamos al CSS externo -->
+  <link rel="stylesheet" href="CSS3/style.css">
+</head>
+<body>
+  <header>
+    <!-- Logo institucional (debe estar en carpeta /logo) -->
+    <header>
+    <img src="logo/ecci_logo.png" alt="Logo Universidad ECCI">
+    <h1>Conecta ECCI – Red de Emprendedores</h1>
+    <p>Centro de Desarrollo Empresarial CDE / Proyección Social</p>
+    <p class="obligatorio">* Indica que la pregunta es obligatoria</p>
+  </header>
+  
+
+  <main>
+    <form id="formEmprendimiento">
+
+      <!-- Datos personales -->
+      <fieldset>
+        <legend>Datos personales</legend>
+
+        <label for="fnom">Nombre Completo *</label>
+        <input type="text" id="fnom" name="nombre" required>
+
+        <label for="fcedula">No de Cédula *</label>
+        <input type="text" id="fcedula" name="cedula" required>
+
+        <label for="fcel">Número de Celular *</label>
+        <input type="tel" id="fcel" name="celular" required>
+
+        <p>Tipo de vinculación con la Universidad ECCI *</p>
+        <label><input type="radio" id="v1" name="vinculacion" required> Estudiante actual</label>
+        <label><input type="radio" id="v2" name="vinculacion"> Egresado</label>
+        <label><input type="radio" id="v3" name="vinculacion"> Administrativo</label>
+        <label><input type="radio" id="v4" name="vinculacion"> Docente</label>
+      </fieldset>
+
+      <!-- Datos del emprendimiento -->
+      <fieldset>
+        <legend>Datos del emprendimiento</legend>
+
+        <label for="femp">Nombre del Emprendimiento *</label>
+        <input type="text" id="femp" name="emprendimiento" required>
+
+        <label for="femail">Correo Electrónico (Empresarial) *</label>
+        <input type="email" id="femail" name="correo" required>
+
+        <label for="fredes">Usuario en redes sociales</label>
+        <input type="text" id="fredes" name="redes">
+
+        <p>Tipo de Actor *</p>
+        <label><input type="radio" id="a1" name="actor" required> Emprendimiento</label>
+        <label><input type="radio" id="a2" name="actor"> Negocio</label>
+        <label><input type="radio" id="a3" name="actor"> Empresa</label>
+
+        <label for="fdesc">Descripción corta del negocio / empresa *</label>
+        <textarea id="fdesc" name="descripcion" rows="3" required></textarea>
+
+        <label for="fprod">¿Qué productos o servicios ofrece? *</label>
+        <textarea id="fprod" name="productos" rows="3" required></textarea>
+
+        <p>Categoría *</p>
+        <label><input type="radio" id="c1" name="categoria" required> Alimentos y bebidas</label>
+        <label><input type="radio" id="c2" name="categoria"> Moda y Accesorios</label>
+        <label><input type="radio" id="c3" name="categoria"> Servicios Creativos</label>
+        <label><input type="radio" id="c4" name="categoria"> Tecnología y Software</label>
+        <label><input type="radio" id="c5" name="categoria"> Educación y formación</label>
+        <label><input type="radio" id="c6" name="categoria"> Bienestar y salud</label>
+        <label><input type="radio" id="c7" name="categoria"> Gastronomía</label>
+        <label><input type="radio" id="c8" name="categoria"> Servicios de Ingeniería</label>
+        <label><input type="radio" id="c9" name="categoria"> Asesoría y consultoría</label>
+
+        <label for="cotro">Otro:</label>
+        <input type="text" id="cotro" name="categoria_otro">
+      </fieldset>
+
+      <!-- Contacto y cobertura -->
+      <fieldset>
+        <legend>Contacto y cobertura</legend>
+        <p>Canales de contacto:</p>
+        <label><input type="checkbox" id="cc1" name="canales" value="Instagram"> Instagram</label>
+        <label><input type="checkbox" id="cc2" name="canales" value="Facebook"> Facebook</label>
+        <label><input type="checkbox" id="cc3" name="canales" value="Web"> Página web</label>
+        <label><input type="checkbox" id="cc4" name="canales" value="Whatsapp"> Whatsapp</label>
+        <label><input type="checkbox" id="cc5" name="canales" value="Ubicacion"> Ubicación Física</label>
+
+        <p>Cobertura:</p>
+        <label><input type="checkbox" id="cb1" name="cobertura" value="Ciudad"> Ciudad</label>
+        <label><input type="checkbox" id="cb2" name="cobertura" value="Departamento"> Departamento</label>
+        <label><input type="checkbox" id="cb3" name="cobertura" value="Nacional"> Nacional</label>
+        <label><input type="checkbox" id="cb4" name="cobertura" value="Internacional"> Internacional</label>
+        <label><input type="checkbox" id="cb5" name="cobertura" value="Zonal"> Zonal (Localidad)</label>
+
+        <label for="flogo">Anexe su Logo (máximo 10 MB)</label>
+        <input type="file" id="flogo" name="logo" accept="image/*">
+      </fieldset>
+
+      <!-- Consentimientos -->
+      <fieldset>
+        <legend>Consentimientos</legend>
+        <p>¿Autoriza la publicación en el Directorio de Emprendedores ECCI? *</p>
+        <label><input type="radio" name="publicacion" value="Si" required> Acepto</label>
+        <label><input type="radio" name="publicacion" value="No"> No acepto</label>
+
+        <p>¿Autoriza la recepción de información institucional? *</p>
+        <label><input type="radio" name="informacion" value="Si" required> Acepto</label>
+        <label><input type="radio" name="informacion" value="No"> No acepto</label>
+      </fieldset>
+
+      <!-- Comentarios -->
+      <fieldset>
+        <legend>Comentarios</legend>
+        <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escriba sus comentarios..."></textarea>
+      </fieldset>
+
+      <!-- Botones -->
+      <div class="acciones">
+        <button type="submit">Enviar</button>
+        <button type="reset">Borrar formulario</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
